@@ -1,3 +1,0 @@
-import pandas as pd 
-datagrame = pd.read_csv('persona.csv')
-dataframe.head()
