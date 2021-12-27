@@ -59,3 +59,24 @@ seg_map = {
 }
 rfm['segment'] = rfm['RFM_SCORE'].replace(seg_map, regex=True)
 rfm.head()
+
+#Reviews about some of the segments
+
+#Below, frequency is high while recency is low in these two groups. 
+#Remarketing studies can be done (ex. email reminder, providing a promotional code).
+
+rfm[rfm['segment']=='cant_loose']
+rfm[rfm['segment']=='at_Risk']
+
+#Below, both these groups can be categorized as "newcomers". 
+#Frequency score of these customers can be increased by cross-selling and up-selling.
+
+rfm[rfm['segment']=='new_customers']
+rfm[rfm['segment']=='promising']
+
+# Below, these groups are those who know the brand and shop regularly.
+# Promotions and special discounts can be provided to keep them satisfied.
+# Communication channels can be kept active (email, sms, etc.).
+
+rfm[rfm['segment']=='champions']
+rfm[rfm['segment']=='potential_loyalists']
